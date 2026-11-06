@@ -3,7 +3,7 @@
 Returns a list of countries a truck must drive through to get from the USA to the country that you 
 choose within North America.
 
-#Live: https://jonah-country-api.onrender.com/{countryCode}
+# Live: https://jonah-country-api.onrender.com/{countryCode}
 - It is hosted on Render's free tier
 - So the first request after inactivity might take about a minute for the app to wake up
 
