@@ -2,7 +2,6 @@ package com.atkinson.CHRobinsonProject;
 
 
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,12 +32,7 @@ public class CountryController {
     }
 
     @ExceptionHandler(ResponseStatusException.class)
-    public ResponseEntity<String> invalidCode(ResponseStatusException e) {
+    public ResponseEntity<String> invalidCode() {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Invalid code, try again. Valid codes: CAN, USA, MEX, BLZ, GTM, SLV, HND, NIC, CRI, PAN");
     }
-
-
-
-
-
 }

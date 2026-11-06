@@ -23,9 +23,8 @@ public class CountryService {
             "NIC", List.of("USA", "MEX", "GTM", "HND", "NIC"),
             "CRI", List.of("USA", "MEX", "GTM", "HND", "NIC", "CRI"),
             "PAN", List.of("USA", "MEX", "GTM", "HND", "NIC", "CRI", "PAN")
-
     );
-
+ 
     public List<String> returnRoute(String code) {
         String codeTrimmed = code.trim().toUpperCase();
         if (!borderGrouping.containsKey(codeTrimmed)) {
@@ -33,8 +32,4 @@ public class CountryService {
         }
         return borderGrouping.get(codeTrimmed);
     }
-
-
-
-
 }
