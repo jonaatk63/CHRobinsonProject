@@ -24,7 +24,7 @@ public class CountryController {
 
     @GetMapping("/")
     public String home() {
-        return "Use: /{countryCode}, Ex: /PAN | All Codest: CAN, USA, MEX, BLZ, GTM, SLV, HND, NIC, CRI, PAN";
+        return "Use: /{countryCode}, Ex: /PAN | All Codes: CAN, USA, MEX, BLZ, GTM, SLV, HND, NIC, CRI, PAN";
     }
 
 
