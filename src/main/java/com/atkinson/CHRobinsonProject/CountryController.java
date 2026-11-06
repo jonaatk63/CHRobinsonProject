@@ -22,6 +22,11 @@ public class CountryController {
         return countryService.returnRoute(code);
     }
 
+    @GetMapping("/")
+    public String home() {
+        return "Use: /{countryCode}, Ex: /PAN | All Codest: CAN, USA, MEX, BLZ, GTM, SLV, HND, NIC, CRI, PAN";
+    }
+
 
 
 
