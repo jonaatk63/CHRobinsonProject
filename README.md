@@ -36,4 +36,13 @@ open http://localhost:8080/{countryCode}
 - The hosting: I tried Microsoft Azure at first but the free student subscription would not allow me to deploy a web app,
 - so I asked Claude Code and it suggested a Dockerfile while deploying on render. 
 
+## Assumptions
+- The Route is the shortest path by land and every trip starts in the USA going through bordering countries. So that means there is only one possible route to each country/destination.
+- I assume the list would want to keep the start and end destinations to show total trip
+- USA would just return USA because it does not go anywhere
+- The entering of the codes is forgiving with white space trimming and to upper case
+- invalid codes return a 404 error
+- It is a fixed map so easiest implementation would be a pre made hash map with inputted keys and list values. This is also because the list size doesn't change
+- Just returns a JSON object
+- Only travel by land because of the context: trucks are driving
 
