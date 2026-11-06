@@ -31,7 +31,6 @@ public class CountryService {
         if (!borderGrouping.containsKey(codeTrimmed)) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Country Code does not exist" + code);
         }
-
         return borderGrouping.get(codeTrimmed);
     }
 
