@@ -29,7 +29,7 @@ public class CountryService {
     public List<String> returnRoute(String code) {
         String codeTrimmed = code.trim().toUpperCase();
         if (!borderGrouping.containsKey(codeTrimmed)) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Country Code does not exist" + code);
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Invalid code");
         }
         return borderGrouping.get(codeTrimmed);
     }
