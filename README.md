@@ -8,7 +8,7 @@ choose within North America.
 - So the first request after inactivity might take about a minute for the app to wake up
 
 
-#Using the app
+## Using the app
 
 It is a simple GET endpoint receiving a country code
 
@@ -19,15 +19,17 @@ https://jonah-country-api.onrender.com/PAN returns:
 
 codes: CAN, USA, MEX, BLZ, GTM, SLV, HND, NIC, CRI, PAN
 
-##Stack
+## Stack
 - Java 21, Spring Boot 4, Gradle
 - Docker file, deployed on render
 
-##Run Locally
+## Run Locally
 ./gradlew bootRun
 open http://localhost:8080/{countryCode}
+## Test
+./gradlew test to run unit tests
 
-##Design
+## Design
 - Simple Controller and Service dependency injection interaction
 - Hash Map: the routes are pre entered into a hash map since the data set is small and does not change
 - If the data set would for some reason grow I would probably use Breadth-first-search to search each level finding neighbors
